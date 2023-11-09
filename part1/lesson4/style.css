@@ -1,0 +1,12 @@
+#add-btn {
+  background-color: yellow;
+  border: 2px solid black;
+  padding: 2px 8px;
+}
+
+#buy-btn {
+  background-color: rgb(255, 174, 0);
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 2px 8px;
+}
