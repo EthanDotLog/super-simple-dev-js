@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 7 exercises</title>
+</head>
+<body> 
+  <button onclick="greet('User')">Say Hi</button>
+  <button onclick="otherGreet('User')">Other hi</button>
+  <button onclick="convertToFahrenheit(25)">convert c</button>
+  <button onclick="convertToCelsius(86)">convert f</button>
+  <button onclick="convertTemperature(25, 'C')">convert temp c</button>
+  <button onclick="convertTemperature(86, 'F')">convert temp f</button>
+
+  <script>
+    let result
+    function greet(name = 'there') {
+      console.log(`Hello ${name}!`)
+    }
+
+    function otherGreet(name) {
+      if (!name) {
+        console.log('hello friend!')
+      } else {
+        console.log(`Hello ${name}!`)
+      }
+    }
+
+    function convertToFahrenheit(celsius) {
+      result = ((celsius * 9) / 5 + 32)
+      console.log(result)
+    }
+
+    function convertToCelsius(fahrenheit) {
+      result = (((fahrenheit - 32) * 5) / 9 )
+      console.log(result)
+    }
+
+    function convertTemperature(degrees, unit) {
+      if (unit === 'C') {
+        result = convertToFahrenheit(degrees)
+      } else {
+        result = convertToCelsius(degrees)
+      }
+    }
+
+  </script>
+</body>
+</html>
